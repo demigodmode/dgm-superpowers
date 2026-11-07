@@ -11,7 +11,7 @@ Write implementation plans for an engineer who has not seen this codebase or thi
 
 **Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
 
-**Context:** If working in an isolated worktree, it should have been created via the `superpowers:using-git-worktrees` skill at execution time.
+**Context:** Prefer a normal git branch in the current workspace. Only use a dedicated worktree (via `superpowers:using-git-worktrees`) if your human partner explicitly wants isolation or parallel workspace separation.
 
 **Save plans to:** `local_docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
 - (User preferences for plan location override this default)

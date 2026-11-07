@@ -1,13 +1,20 @@
 ---
 name: using-git-worktrees
-description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
+description: Use when your human partner explicitly wants an isolated workspace, when parallel branch work is needed, or when implementation should not happen in the current workspace - ensures isolation via native tools or git worktree fallback
 ---
 
 # Using Git Worktrees
 
 ## Overview
 
-Ensure work happens in an isolated workspace. Prefer your platform's native worktree tools. Fall back to manual git worktrees only when no native tool is available.
+Ensure work happens in an isolated workspace when isolation is actually needed. By default, a normal git branch in the current workspace is enough. When an isolated workspace is wanted, prefer your platform's native worktree tools. Fall back to manual git worktrees only when no native tool is available.
+
+**Default policy:** Branches first, worktrees optional.
+
+**Use this skill only when:**
+- your human partner explicitly asks for a worktree or isolated workspace
+- multiple branches need to be worked on in parallel
+- implementation should not happen in the current workspace
 
 **Core principle:** Detect existing isolation first. Then use native tools. Then fall back to git. Never fight the harness.
 
