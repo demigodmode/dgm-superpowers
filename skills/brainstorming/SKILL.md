@@ -243,9 +243,13 @@ or two each and goes straight to your human partner, without the
 builder check.
 
 **Where it goes:** in a software repo,
-`docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`, committed.
+`local_docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`.
 Otherwise, pick a sensible place and say where. Your human partner's
-preferences override both.
+preferences override both. `local_docs/` is for internal planning
+artifacts; don't put superpowers files in the public-facing `docs/`
+unless your human partner asks for it. If the path is gitignored, that's
+intentional: leave the file local-only, don't force-add it, don't touch
+the ignore rules. Only commit the spec if the path is already tracked.
 
 **Builder check** (for a project): dispatch a fresh subagent with
 `builder-check-prompt.md` in this directory. When you tell your human
